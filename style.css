@@ -1,0 +1,126 @@
+/* PAGE & BODY */
+* {
+  font-family: "Poppins", sans-serif; /* Clean, modern font */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+/* WIDGET */
+.widget-wrap {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(0px); /* Glassmorphism effect */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+#code-boxx {
+  font-weight: 600;
+  margin-top: 30px;
+}
+#code-boxx a {
+  display: inline-block;
+  border: 0;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #ff4757;
+  color: #fff;
+}
+
+/* (A) WRAPPER */
+#quizWrap {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* (B) QUESTION */
+#quizQn {
+  padding: 20px;
+  background: rgba(38, 0, 255, 0.7); /* Slightly transparent blue */
+  color: #fff;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* (C) ANSWERS */
+#quizAns {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensures 2 columns */
+  grid-gap: 15px;
+}
+#quizAns input[type="radio"] {
+  display: none;
+}
+#quizAns label {
+  background: #fafafa;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+#quizAns label.correct {
+  background: #d8ffc4;
+  border: 2px solid #60a03f;
+}
+#quizAns label.wrong {
+  background: #ffe8e8;
+  border: 2px solid #c78181;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .widget-wrap {
+    padding: 20px;
+  }
+
+  #quizQn {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  #quizAns label {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #quizQn {
+    font-size: 18px;
+  }
+
+  #quizAns label {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
